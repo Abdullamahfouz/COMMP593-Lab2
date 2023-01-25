@@ -21,3 +21,5 @@ def print_pizza_toppings(about_me):
 def print_movie_genres(about_me):
     return 
 
+if __name__ == '__main__':
+    main()
