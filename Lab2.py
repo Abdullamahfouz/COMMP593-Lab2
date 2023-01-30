@@ -1,57 +1,55 @@
 def main():
 
-    # a complex data structure
-    fav_soccer_player = {
-        'name': 'Cristiano Ronaldo',
-        'nickname': 'CR7',
-        'player_best_team':'Real-Madrid',
-        'players_played_with': 
-            [
-             'Marclo',
-             'Pepe',
-             'benzema'
-        ],
-          
-        'Rivals':[
-            { 
-             'Player': 'Messi',
-             'Goals' : 794,
-             'assits': 350
-            },
+    #complex data structure
+    about_me = {
+        "full_name": "Abdullah Mahfouz",
+        "student_id": 10277237,
+        "pizza_toppings": [
+             "Chicken", 
+             "Mushrooms", 
+             "Cheese"
+             ]
+            ,
+        "movies": [
             {
-              'Player ': 'Cristiano Ronaldo',
-              'goals' : 819,
-              'Asists': 266
-            }
+            "title": "The Dark nigt", 
+             "genre": "action"
+             },
+            {
+            "title": "Whiplash", 
+             "genre": "psychological drama"
+             }
         ]
     }
+    #Added another movie to the data structure
+    about_me["movies"].append({"title": "spider-man no way home ", "genre": "action"})
+    print_student_name_and_id(about_me)
+    
+# Function that prints student name and ID	
+def print_student_name_and_id(about_me):
+    full_name = about_me["full_name"]
+    first_name = full_name.split()[0]
+    student_id = about_me["student_id"]
+    print(f"My name is {full_name}, but you can call me Sir {first_name}.")
+    print(f"My student ID is {student_id}.")
+    
+# Function that adds pizza toppings to data structure
+def add_pizza_toppings(about_me, toppings):
+    about_me["pizza_toppings"].extend(toppings)
+    about_me["pizza_toppings"] = sorted(about_me["pizza_toppings"])
+    about_me["pizza_toppings"] = [topping.lower() for topping in about_me["pizza_toppings"]]
 
-    # Added New rival
-    fav_soccer_player['Rivals'].insert(1,{'Player': 'Zlatan Ibrahimović', 'Goals':  574, 'Assits': 157 })
-    add_other_fav_players(fav_soccer_player,('Ozil', 'Bale', 'ramos'))
-    print_player_name(fav_soccer_player)
-    # Function that prints the player nickname and name 
-def print_player_name(soccer_player):
-    print(f"{soccer_player['nickname']} Aka {soccer_player['name'].title()} has to be one of the best players of all-time for {soccer_player['']}  ")
-   
-    
-    
-# adds fav teams
-def add_other_fav_players(team,):
-   print( f'\n He played with players such as:')
-   for p in team['players_played_with']:
-       print(f'- {p}')
-       
-    
-# prints fac teams
-def print_Rivals(rival):
-   
-  return
-
-# Step 7 - Function that prints comma-separated list of movie genres
-def print_movie_genres(Rivaly):
+# TODO: Step 6 - Function that prints bullet list of pizza toppings
+def print_pizza_toppings(about_me):
     return
-   
 
+# TODO: Step 7 - Function that prints comma-separated list of movie genres
+def print_movie_genres(about_me):
+    return 
+
+# TODO: Step 8 - Function that prints comma-separated list of movie titles
+def print_movie_titles(movie_list):
+    return
+    
 if __name__ == '__main__':
     main()
