@@ -24,7 +24,7 @@ def main():
     #Added another movie to the data structure
     about_me["movies"].append({"title": "spider-man no way home ", "genre": "action"})
     print_student_name_and_id(about_me)
-    
+    add_pizza_toppings(about_me, ("olives", "onions", "steak"))
 # Function that prints student name and ID	
 def print_student_name_and_id(about_me):
     full_name = about_me["full_name"]
