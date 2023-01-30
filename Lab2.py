@@ -22,9 +22,14 @@ def main():
         ]
     }
     #Added another movie to the data structure
-    about_me["movies"].append({"title": "spider-man no way home ", "genre": "action"})
+    about_me["movies"].append({"title": "spider-man no way home ", "genre": "super-hero"})
+    #calling all functions in the script
     print_student_name_and_id(about_me)
+    print_pizza_toppings(about_me)
     add_pizza_toppings(about_me, ("olives", "onions", "steak"))
+    print_pizza_toppings(about_me)
+    print_movie_genres(about_me)
+    print_movie_titles(about_me["movies"])
 # Function that prints student name and ID	
 def print_student_name_and_id(about_me):
     full_name = about_me["full_name"]
@@ -39,17 +44,24 @@ def add_pizza_toppings(about_me, toppings):
     about_me["pizza_toppings"] = sorted(about_me["pizza_toppings"])
     about_me["pizza_toppings"] = [topping.lower() for topping in about_me["pizza_toppings"]]
 
-# TODO: Step 6 - Function that prints bullet list of pizza toppings
+#  Function that prints bullet list of pizza toppings
 def print_pizza_toppings(about_me):
-    return
-
-# TODO: Step 7 - Function that prints comma-separated list of movie genres
+     print("\nMy favourite pizza toppings are:")
+     for topping in about_me["pizza_toppings"]:
+        print("-", topping)
+ 
+# Function that prints comma-separated list of movie genres
 def print_movie_genres(about_me):
-    return 
+    movie_genres = [movie['genre'] for movie in about_me['movies']]
+    genres_str = ', '.join(movie_genres)
+    if len(movie_genres) > 1:
+        genres_str = genres_str.rsplit(', ', 1)[0] + ' and ' + genres_str.rsplit(', ', 1)[1]
+    print(f"\nI like to watch {genres_str} movies.")
 
-# TODO: Step 8 - Function that prints comma-separated list of movie titles
+# Function that prints comma-separated list of movie titles
 def print_movie_titles(movie_list):
-    return
+  movie_titles = [movie["title"].title() for movie in movie_list]
+  print("\nSome of my favourite movies are{}!".format(", ".join(movie_titles)))
     
 if __name__ == '__main__':
     main()
