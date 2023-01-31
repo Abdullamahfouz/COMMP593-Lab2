@@ -61,7 +61,7 @@ def print_movie_genres(about_me):
 # Function that prints comma-separated list of movie titles
 def print_movie_titles(movie_list):
   movie_titles = [movie["title"].title() for movie in movie_list]
-  print("\n Some of my favourite movies are{}!".format(", ".join(movie_titles)))
+  print("\nSome of my favourite movies are{}!".format(", ".join(movie_titles)))
     
 if __name__ == '__main__':
     main()
