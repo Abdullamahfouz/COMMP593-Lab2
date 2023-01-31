@@ -26,7 +26,7 @@ def main():
     #calling all functions in the script
     print_student_name_and_id(about_me)
     print_pizza_toppings(about_me)
-    add_pizza_toppings(about_me, ("olives", "onions", "steak"))
+    add_pizza_toppings(about_me, ("Olives", "Onions", "Steak"))
     print_pizza_toppings(about_me)
     print_movie_genres(about_me)
     print_movie_titles(about_me["movies"])
