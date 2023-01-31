@@ -22,7 +22,7 @@ def main():
         ]
     }
     #Added another movie to the data structure
-    about_me["movies"].append({"title": "spider-man no way home ", "genre": "super-hero"})
+    about_me["movies"].append({"title": "Spider-man no way home ", "genre": "Super-Hero"})
     #calling all functions in the script
     print_student_name_and_id(about_me)
     print_pizza_toppings(about_me)
