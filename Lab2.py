@@ -44,7 +44,7 @@ def add_pizza_toppings(about_me, toppings):
     about_me["pizza_toppings"] = sorted(about_me["pizza_toppings"])
     about_me["pizza_toppings"] = [topping.lower() for topping in about_me["pizza_toppings"]]
 
-#  Function that prints bullet list of pizza toppings
+# Function that prints bullet list of pizza toppings
 def print_pizza_toppings(about_me):
      print("\nMy favourite pizza toppings are:")
      for topping in about_me["pizza_toppings"]:
